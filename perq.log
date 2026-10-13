@@ -1,0 +1,58 @@
+W1013 23:45:22.293000 29832 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 31999), got 128002. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/471 [00:00<?, ?it/s]Loading weights:  29%|██▉       | 136/471 [00:00<00:00, 1329.57it/s]Loading weights:  57%|█████▋    | 269/471 [00:00<00:00, 1222.39it/s]Loading weights:  83%|████████▎ | 392/471 [00:00<00:00, 1108.77it/s]Loading weights: 100%|██████████| 471/471 [00:00<00:00, 1118.47it/s]
+
+===== 基线 × 15 题（逐题输出）=====
+[P01·count] × Q: 图中有几个红色圆形？  A: 1   (gold: 2)
+[P02·count] × Q: 图中有几个绿色圆形？  A: 1   (gold: 3)
+[P03·count] √ Q: 图中有几个黄色方形？  A: 2   (gold: 2)
+[P04·count] × Q: 图中有几个黄色圆形？  A: 1   (gold: 4)
+[P05·count] × Q: 图中有几个蓝色圆形？  A: 1   (gold: 3)
+[P06·attr] × Q: 图中蓝色的图形是什么形状？  A: 0   (gold: 方形)
+[P07·attr] × Q: 图中红色的图形是什么形状？  A: 形状是白色的。   (gold: 圆形)
+[P08·attr] × Q: 图中绿色的图形是什么形状？  A: 载身。   (gold: 方形)
+[P09·attr] × Q: 图中黄色的图形是什么形状？  A: 其中，黄色的图形是黄色的图   (gold: 圆形)
+[P10·attr] × Q: 图中蓝色的图形是什么形状？  A: 形状是小圆形。   (gold: 方形)
+[P11·exist] × Q: 图里有没有黄色方形？  A: No.   (gold: 有)
+[P12·exist] × Q: 图里有没有红色圆形？  A: No.   (gold: 没有)
+[P13·exist] × Q: 图里有没有绿色圆形？  A: No.   (gold: 有)
+[P14·exist] × Q: 图里有没有绿色方形？  A: No.   (gold: 没有)
+[P15·exist] × Q: 图里有没有蓝色图形？  A: No   (gold: 没有)
+Loading weights:   0%|          | 0/471 [00:00<?, ?it/s]Loading weights:  29%|██▉       | 137/471 [00:00<00:00, 1313.01it/s]Loading weights:  57%|█████▋    | 269/471 [00:00<00:00, 1127.07it/s]Loading weights:  82%|████████▏ | 384/471 [00:00<00:00, 1008.46it/s]Loading weights: 100%|██████████| 471/471 [00:00<00:00, 1029.57it/s]
+
+===== SFT × 15 题（逐题输出）=====
+[P01·count] √ Q: 图中有几个红色圆形？  A: 2.   (gold: 2)
+[P02·count] × Q: 图中有几个绿色圆形？  A: 1.   (gold: 3)
+[P03·count] √ Q: 图中有几个黄色方形？  A: 2.   (gold: 2)
+[P04·count] √ Q: 图中有几个黄色圆形？  A: 1. 2. 3. 4. 5. 6. 7. 8.   (gold: 4)
+[P05·count] × Q: 图中有几个蓝色圆形？  A: 1.   (gold: 3)
+[P06·attr] × Q: 图中蓝色的图形是什么形状？  A: 0.   (gold: 方形)
+[P07·attr] × Q: 图中红色的图形是什么形状？  A: 2D.   (gold: 圆形)
+[P08·attr] × Q: 图中绿色的图形是什么形状？  A: 青色。   (gold: 方形)
+[P09·attr] × Q: 图中黄色的图形是什么形状？  A: Green.   (gold: 圆形)
+[P10·attr] × Q: 图中蓝色的图形是什么形状？  A: 图形是塑料。   (gold: 方形)
+[P11·exist] × Q: 图里有没有黄色方形？  A: No.   (gold: 有)
+[P12·exist] × Q: 图里有没有红色圆形？  A: No.   (gold: 没有)
+[P13·exist] × Q: 图里有没有绿色圆形？  A: No.   (gold: 有)
+[P14·exist] × Q: 图里有没有绿色方形？  A: No.   (gold: 没有)
+[P15·exist] × Q: 图里有没有蓝色图形？  A: No.   (gold: 没有)
+Loading weights:   0%|          | 0/471 [00:00<?, ?it/s]Loading weights:  25%|██▍       | 116/471 [00:00<00:00, 1146.80it/s]Loading weights:  51%|█████     | 240/471 [00:00<00:00, 1197.77it/s]Loading weights:  76%|███████▋  | 360/471 [00:00<00:00, 1138.71it/s]Loading weights: 100%|██████████| 471/471 [00:00<00:00, 1125.46it/s]
+
+===== SFT+DPO × 15 题（逐题输出）=====
+[P01·count] × Q: 图中有几个红色圆形？  A: 3.   (gold: 2)
+[P02·count] × Q: 图中有几个绿色圆形？  A: 1.   (gold: 3)
+[P03·count] √ Q: 图中有几个黄色方形？  A: 2.   (gold: 2)
+[P04·count] × Q: 图中有几个黄色圆形？  A: 1.   (gold: 4)
+[P05·count] √ Q: 图中有几个蓝色圆形？  A: 3.   (gold: 3)
+[P06·attr] × Q: 图中蓝色的图形是什么形状？  A: 0。   (gold: 方形)
+[P07·attr] × Q: 图中红色的图形是什么形状？  A: 2D.   (gold: 圆形)
+[P08·attr] × Q: 图中绿色的图形是什么形状？  A: 三角形。   (gold: 方形)
+[P09·attr] × Q: 图中黄色的图形是什么形状？  A: Green.   (gold: 圆形)
+[P10·attr] × Q: 图中蓝色的图形是什么形状？  A: 2.   (gold: 方形)
+[P11·exist] × Q: 图里有没有黄色方形？  A: No.   (gold: 有)
+[P12·exist] × Q: 图里有没有红色圆形？  A: No.   (gold: 没有)
+[P13·exist] × Q: 图里有没有绿色圆形？  A: No.   (gold: 有)
+[P14·exist] × Q: 图里有没有绿色方形？  A: No.   (gold: 没有)
+[P15·exist] × Q: 图里有没有蓝色图形？  A: No.   (gold: 没有)
+
+提示：把上面各阶段 P01 / P06 / P12 三题的输出抄进报告 4.3 节。

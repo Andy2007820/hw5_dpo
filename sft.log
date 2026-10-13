@@ -1,0 +1,14 @@
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 31999), got 128002. This may result in unexpected behavior.
+W1013 23:33:53.230000 3584 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+Loading weights:   0%|          | 0/471 [00:00<?, ?it/s]Loading weights:   0%|          | 1/471 [00:00<01:00,  7.73it/s]Loading weights:   0%|          | 2/471 [00:00<00:53,  8.73it/s]Loading weights:   4%|▍         | 19/471 [00:00<00:05, 76.76it/s]Loading weights:  20%|██        | 95/471 [00:00<00:01, 332.34it/s]Loading weights:  37%|███▋      | 176/471 [00:00<00:00, 497.66it/s]Loading weights:  53%|█████▎    | 250/471 [00:00<00:00, 571.65it/s]Loading weights:  70%|███████   | 331/471 [00:00<00:00, 640.99it/s]Loading weights:  86%|████████▌ | 404/471 [00:00<00:00, 668.52it/s]Loading weights: 100%|██████████| 471/471 [00:00<00:00, 506.27it/s]
+[transformers] `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+C:\Users\45485\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_dynamo\eval_frame.py:1263: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. Starting in PyTorch 2.9, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+C:\Users\45485\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\peft\utils\save_and_load.py:313: UserWarning: Could not find a config file in HuggingFaceTB/SmolVLM-256M-Instruct - will assume that the vocabulary was not modified.
+  warnings.warn(
+[model] 4-bit NF4 量化基座 + LoRA（QLoRA 路径）
+trainable params: 1,363,968 || all params: 257,848,896 || trainable%: 0.5290
+[sft] ep1 step10/30 loss=6.6755
+[sft] ep2 step20/30 loss=2.0678
+[sft] ep2 step30/30 loss=2.0375
+[sft] 适配器已保存到 ./sft_adapter

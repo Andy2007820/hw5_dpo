@@ -1,0 +1,32 @@
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 31999), got 128002. This may result in unexpected behavior.
+W1013 23:37:32.654000 32216 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+Loading weights:   0%|          | 0/471 [00:00<?, ?it/s]Loading weights:   0%|          | 1/471 [00:00<01:01,  7.65it/s]Loading weights:   0%|          | 2/471 [00:00<00:57,  8.10it/s]Loading weights:   7%|▋         | 32/471 [00:00<00:03, 125.15it/s]Loading weights:  25%|██▍       | 117/471 [00:00<00:00, 388.80it/s]Loading weights:  42%|████▏     | 196/471 [00:00<00:00, 524.66it/s]Loading weights:  62%|██████▏   | 293/471 [00:00<00:00, 665.91it/s]Loading weights:  80%|████████  | 379/471 [00:00<00:00, 721.29it/s]Loading weights:  97%|█████████▋| 459/471 [00:00<00:00, 737.37it/s]Loading weights: 100%|██████████| 471/471 [00:00<00:00, 538.17it/s]
+C:\Users\45485\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\peft\tuners\tuners_utils.py:331: UserWarning: Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
+  warnings.warn(
+[transformers] `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+C:\Users\45485\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_dynamo\eval_frame.py:1263: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. Starting in PyTorch 2.9, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+C:\Users\45485\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\utils\checkpoint.py:232: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  check_backward_validity(args)
+C:\Users\45485\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\peft\utils\save_and_load.py:313: UserWarning: Could not find a config file in HuggingFaceTB/SmolVLM-256M-Instruct - will assume that the vocabulary was not modified.
+  warnings.warn(
+[model] 4-bit NF4 量化基座 + LoRA（QLoRA 路径）
+trainable params: 1,363,968 || all params: 257,848,896 || trainable%: 0.5290
+[dpo] step1 loss=0.2073 margin=1.468
+[dpo] step2 loss=0.8078 margin=-0.217
+[dpo] step3 loss=0.9209 margin=-0.413
+[dpo] step4 loss=0.7264 margin=-0.065
+[dpo] step5 loss=0.7115 margin=-0.036
+[dpo] step6 loss=0.5086 margin=0.411
+[dpo] step7 loss=0.5570 margin=0.294
+[dpo] step8 loss=0.7709 margin=-0.150
+[dpo] step9 loss=0.6662 margin=0.055
+[dpo] step10 loss=0.2304 margin=1.350
+[dpo] step11 loss=0.5506 margin=0.309
+[dpo] step12 loss=0.2424 margin=1.293
+[dpo] step13 loss=0.7418 margin=-0.095
+[dpo] step14 loss=0.2487 margin=1.265
+[dpo] step15 loss=0.9070 margin=-0.390
+[dpo] step16 loss=0.3223 margin=0.967
+[dpo] step17 loss=0.6016 margin=0.192
+[dpo] 适配器已保存到 ./dpo_adapter

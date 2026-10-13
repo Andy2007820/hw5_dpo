@@ -1,0 +1,25 @@
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 31999), got 128002. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/471 [00:00<?, ?it/s]Loading weights:  24%|██▍       | 115/471 [00:00<00:00, 1145.94it/s]Loading weights:  49%|████▉     | 230/471 [00:00<00:00, 1095.42it/s]Loading weights:  72%|███████▏  | 340/471 [00:00<00:00, 1022.76it/s]Loading weights:  94%|█████████▍| 443/471 [00:00<00:00, 941.11it/s] Loading weights: 100%|██████████| 471/471 [00:00<00:00, 1000.30it/s]
+W1013 23:57:02.949000 27376 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+
+===== 基线 × 15 题 =====
+基线        count   正确 1/5
+基线        attr    正确 0/5
+基线        exist   正确 0/5
+基线        总计         正确 1/15
+
+
+===== SFT × 15 题 =====
+SFT       count   正确 3/5
+SFT       attr    正确 0/5
+SFT       exist   正确 0/5
+SFT       总计         正确 3/15
+
+
+===== SFT+DPO × 15 题 =====
+SFT+DPO   count   正确 3/5
+SFT+DPO   attr    正确 0/5
+SFT+DPO   exist   正确 0/5
+SFT+DPO   总计         正确 3/15
+
+提示：把三阶段结果抄进报告表 3；另抽 2 题做人工忠实度评分（答案是否仅陈述图中事实）。

@@ -1,0 +1,32 @@
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 31999), got 128002. This may result in unexpected behavior.
+W1013 23:47:53.476000 35612 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+Loading weights:   0%|          | 0/471 [00:00<?, ?it/s]Loading weights:   0%|          | 1/471 [00:00<01:01,  7.66it/s]Loading weights:   0%|          | 2/471 [00:00<00:56,  8.33it/s]Loading weights:   3%|▎         | 16/471 [00:00<00:07, 62.47it/s]Loading weights:  17%|█▋        | 79/471 [00:00<00:01, 270.64it/s]Loading weights:  32%|███▏      | 151/471 [00:00<00:00, 422.76it/s]Loading weights:  45%|████▌     | 214/471 [00:00<00:00, 490.15it/s]Loading weights:  60%|██████    | 283/471 [00:00<00:00, 550.55it/s]Loading weights:  75%|███████▍  | 351/471 [00:00<00:00, 590.61it/s]Loading weights:  91%|█████████ | 427/471 [00:00<00:00, 640.08it/s]Loading weights: 100%|██████████| 471/471 [00:01<00:00, 465.07it/s]
+C:\Users\45485\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\peft\tuners\tuners_utils.py:331: UserWarning: Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
+  warnings.warn(
+[transformers] `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+C:\Users\45485\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_dynamo\eval_frame.py:1263: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. Starting in PyTorch 2.9, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+C:\Users\45485\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\utils\checkpoint.py:232: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  check_backward_validity(args)
+C:\Users\45485\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\peft\utils\save_and_load.py:313: UserWarning: Could not find a config file in HuggingFaceTB/SmolVLM-256M-Instruct - will assume that the vocabulary was not modified.
+  warnings.warn(
+[model] 4-bit NF4 量化基座 + LoRA（QLoRA 路径）
+trainable params: 1,363,968 || all params: 257,848,896 || trainable%: 0.5290
+[dpo] step1 loss=0.3922 margin=0.734
+[dpo] step2 loss=0.7468 margin=-0.105
+[dpo] step3 loss=0.8030 margin=-0.209
+[dpo] step4 loss=0.7102 margin=-0.034
+[dpo] step5 loss=0.7025 margin=-0.019
+[dpo] step6 loss=0.5959 margin=0.205
+[dpo] step7 loss=0.6233 margin=0.145
+[dpo] step8 loss=0.7312 margin=-0.075
+[dpo] step9 loss=0.6787 margin=0.029
+[dpo] step10 loss=0.4094 margin=0.681
+[dpo] step11 loss=0.6156 margin=0.162
+[dpo] step12 loss=0.4179 margin=0.656
+[dpo] step13 loss=0.7175 margin=-0.048
+[dpo] step14 loss=0.4209 margin=0.648
+[dpo] step15 loss=0.7952 margin=-0.195
+[dpo] step16 loss=0.4772 margin=0.492
+[dpo] step17 loss=0.6465 margin=0.096
+[dpo] 适配器已保存到 ./dpo_adapter
